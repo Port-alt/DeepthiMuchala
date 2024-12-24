@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepthi Muchala</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #f1f1f1;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1a1a1a;
+            color: #ffd700; /* Gold color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+        }
+        .intro {
+            text-align: center;
+            padding: 40px;
+            background-color: #333333;
+            border-radius: 10px;
+            margin: 20px 10%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .intro h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #ffd700; /* Gold color */
+        }
+        .intro p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #e0e0e0;
+        }
+        .intro a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .intro a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav-item {
+            background-color: #444444;
+            color: #ffd700;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            width: 180px;
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            background-color: #ffd700;
+            color: #000000;
+            transform: scale(1.05);
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+        .modal-content {
+            background-color: #333333;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .modal h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffd700; /* Gold color */
+        }
+        .modal p {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #ffd700;
+        }
+        /* Modal Animation */
+        .modal-content {
+            animation: modalOpen 0.3s ease-out;
+        }
+        @keyframes modalOpen {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Deepthi Muchala</h1>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="intro">
+        <h2>Welcome to My Portfolio</h2>
+        <p><strong>Email:</strong> <a href="mailto:deepthi23muc@gmail.com">deepthi23muc@gmail.com</a></p>
+        <p><strong>Phone No:</strong> 361-355-5090</p>
+        <p style="font-size: 1.2em;">Hello! I’m Deepthi Muchala, a passionate and dedicated Master's student in <strong>Computer and Information Sciences</strong> at Texas A&M University, Kingsville. I specialize in building efficient software solutions and solving complex challenges using modern technologies such as <span style="color: #ffd700;">Java, Python, React JS, and C++</span>. My areas of focus include <span style="color: #ffd700;">Artificial Intelligence, Data Structures, and Software Development</span>.</p>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav>
+        <div class="nav-item" data-target="education">Education</div>
+        <div class="nav-item" data-target="skills">Technical Skills</div>
+        <div class="nav-item" data-target="experience">Work Experience</div>
+        <div class="nav-item" data-target="projects">Projects</div>
+        <div class="nav-item" data-target="contact">Contact</div>
+    </nav>
+
+    <!-- Modal for Education -->
+    <div id="education-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-target="education">&times;</span>
+            <h2>Education</h2>
+            <p><strong>Texas A&M University: Kingsville, Texas</strong> [August 2023 – August 2025]</p>
+            <p><strong>Master's in Computer and Information Sciences</strong> [GPA: 3.8/4.0]</p>
+            <p><strong>Relevant Coursework:</strong> Analysis of Algorithms, Artificial Intelligence, Database Theory and Design, Data Structures and Algorithms, Object-Oriented Programming, Distributed Systems, Computer Networks, Advanced Computer Networks, Real-Time Systems, Data Science, Computer Storage Systems, Cyber Security, Compiler Design.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Skills -->
+    <div id="skills-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-target="skills">&times;</span>
+            <h2>Technical Skills</h2>
+            <p><strong>Strong:</strong> Java, Python, C++, MySQL, React JS</p>
+            <p><strong>Experienced:</strong> HTML, CSS, JavaScript, PHP, AWS, MS SQL, PostgreSQL, Linux, Unix, Git</p>
+        </div>
+    </div>
+
+    <!-- Modal for Work Experience -->
+    <div id="experience-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-target="experience">&times;</span>
+            <h2>Professional Work Experience</h2>
+            <p><strong>Texas A&M University – Department of Computer and Information Sciences</strong> [January 2024 – August 2024]</p>
+            <p><strong>Graduate Instructional Assistant</strong></p>
+            <ul>
+                <li>Taught "Introduction to Data Structures and Algorithms" and "Introduction to Programming in C++" to Bachelor's students.</li>
+                <li>Independently supervised 4 classes of 40 to 45 students each semester.</li>
+                <li>Tutored 500+ students on C++, Java, and Python.</li>
+                <li>Led weekly labs and aided students.</li>
+                <li>Graded labs, homework, projects, midterms, and final exams.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Projects -->
+    <div id="projects-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-target="projects">&times;</span>
+            <h2 style="color: #ffd700;">Programming Projects</h2>
+            
+            <h3 style="color: #ffd700;">Ither Travel</h3>
+            <p>Developed a web application that helps users book hotels and cars for travel.</p>
+            <p><strong style="color: #ffd700;">Technologies Implemented:</strong> React JS, Python Flask, MySQL</p>
+    
+            <h3 style="color: #ffd700;">Connect Four Game</h3>
+            <p>Designed and developed a Connect Four game using Minmax AB, Alpha Beta search, and evaluation functions to compare the results of two algorithms and see which one yields better results with C++.</p>
+    
+            <h3 style="color: #ffd700;">Connect US</h3>
+            <p>Developed a mobile application for the government of Sikkim, India, that allows students to view and register to volunteer for events in their area. Also developed the web application for government officials to view and approve registered students.</p>
+            <p><strong style="color: #ffd700;">Technologies Implemented:</strong> AngularJS, PHP, MySQL</p>
+        </div>
+    </div>
+
+    <!-- Modal for Contact -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-target="contact">&times;</span>
+            <h2>Contact</h2>
+            <p><strong>Deepthi Muchala</strong></p>
+            <p><strong>Email:</strong> <a href="mailto:deepthi23muc@gmail.com">deepthi23muc@gmail.com</a></p>
+            <p><strong>Phone No:</strong> 361-355-5090</p>
+        </div>
+    </div>
+
+    <script>
+        const navItems = document.querySelectorAll('.nav-item');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close');
+
+        // Open modal on nav item click
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const targetModal = document.getElementById(item.getAttribute('data-target') + '-modal');
+                targetModal.style.display = 'block';
+            });
+        });
+
+        // Close modal on close button click
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetModal = document.getElementById(button.getAttribute('data-target') + '-modal');
+                targetModal.style.display = 'none';
+            });
+        });
+
+        // Close the modal when clicking outside the modal content
+        window.addEventListener('click', (event) => {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
